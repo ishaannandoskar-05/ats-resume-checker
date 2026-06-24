@@ -5,7 +5,7 @@
 **AI-powered resume analyzer that scores ATS compatibility and generates an optimized LaTeX resume**
 
 [![React](https://img.shields.io/badge/React-Vite-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org)
-[![Claude](https://img.shields.io/badge/Claude-Sonnet%204.6-CC785C?style=for-the-badge)](https://anthropic.com)
+[![Claude](https://img.shields.io/badge/Gemini%20API-4285F4?style=for-the-badge)](https://ai.google.dev)
 [![Tailwind](https://img.shields.io/badge/Tailwind-CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge)](LICENSE)
 
@@ -15,7 +15,7 @@
 
 ---
 
-> Most resumes are rejected before a human ever reads them — ATS systems filter out candidates based on formatting, keywords, and structure. This tool uses Claude AI to score your resume's ATS compatibility (0–100), identify specific strengths and weaknesses, and generate a fully optimized, ATS-compliant LaTeX resume ready to compile and submit.
+> Most resumes are rejected before a human ever reads them — ATS systems filter out candidates based on formatting, keywords, and structure. This tool uses Google Gemini AI to score your resume's ATS compatibility (0–100), identify specific strengths and weaknesses, and generate a fully optimized, ATS-compliant LaTeX resume ready to compile and submit.
 
 ---
 
@@ -44,13 +44,13 @@ Upload resume (.pdf / .docx)
         ↓
 Client extracts text (mammoth / base64)
         ↓
-API Call #1 → Claude analyzes ATS compatibility
+API Call #1 → Gemini analyzes ATS compatibility
         ↓
 Score ring + Pros/Cons + Keywords + Section scores
         ↓
 Click "Optimize Resume →"
         ↓
-API Call #2 → Claude generates ATS-compliant LaTeX
+API Call #2 → Gemini generates ATS-compliant LaTeX
         ↓
 Copy or download .tex file
 ```
@@ -77,9 +77,9 @@ Copy or download .tex file
 | Layer | Technology |
 |---|---|
 | Frontend | React + Vite, Tailwind CSS |
-| AI Engine | Anthropic API (Claude Sonnet 4.6) |
+| AI Engine | Google Gemini API |
 | DOCX Parsing | mammoth.js |
-| PDF Handling | Base64 → Claude native PDF reading |
+| PDF Handling | Base64 → Gemini native PDF reading |
 | State | useState / useReducer (in-memory) |
 
 ---
@@ -89,7 +89,7 @@ Copy or download .tex file
 ### Prerequisites
 
 - Node.js 18+
-- Anthropic API key
+- Gemini API key
 
 ### Setup
 
@@ -103,7 +103,7 @@ npm install
 
 # Add your API key
 cp .env.example .env
-# Set VITE_ANTHROPIC_API_KEY in .env
+# Set VITE_GEMINI_API_KEY in .env
 
 # Run
 npm run dev
