@@ -22,7 +22,7 @@
 ## 📸 Demo
 
 <!-- Add screenshot here -->
-![ATS Resume Checker](docs/screenshot.png)
+![ATS Resume Checker](docs/dashboard.png)
 
 ---
 
