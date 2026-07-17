@@ -23,7 +23,6 @@
 
 <!-- Add screenshot here -->
 ![ATS Resume Checker](docs/dashboard.png)
-
 ---
 
 ## ✨ Features
